@@ -1,0 +1,29 @@
+.share-wallet-table {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 38px;
+     
+  }
+  .contact-heading > span
+  {	 
+              font-size: 20px;
+          }
+  
+   .user-table >table th {
+     font-size:18px;
+      background-color:#fff;
+     } 
+     /*******only to add alternate row color*************/
+   .user-table >table tbody tr:nth-child(odd)   
+             { 
+             background-color:#eee; }
+    .user-table >table tbody tr:nth-child(even)  
+    { background-color:#fff; }
+    
+    /*****************table style properties*****************************/
+     
+    .user-table >table tbody tr
+             { 
+             padding:5px 5px 5px 5px }
+    

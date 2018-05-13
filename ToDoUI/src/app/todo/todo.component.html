@@ -1,0 +1,42 @@
+<div class="container">
+  <br>
+  <h1>ToDos
+    <a [routerLink]="['/todo-create']" class="btn btn-primary">
+      Add
+    </a>
+  </h1>
+  <br>
+  <table class="table table-bordered user-table">
+    <thead>
+      <tr>
+        <th class="thead-light">Task</th>
+        <th>Details</th>
+        <th>Priority<select (change)="changeHandler($event)" class="form-control">
+          <option value="All">All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select></th>
+        <th>Status<select (change)="selectChangeHandler($event)" class="form-control">
+          <option value="All">All</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Closed">Closed</option>
+        </select></th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.task }}</td>
+        <td>{{ todo.taskDetails }}</td>
+        <td>{{ todo.priority }} </td>
+        <td>{{ todo.status }} </td>
+        <td>
+          <a [routerLink]="['/todo-detail', todo.id]" class="btn btn-primary">View</a>
+          <a [routerLink]="['/todo-edit', todo.id]" class="btn btn-primary">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

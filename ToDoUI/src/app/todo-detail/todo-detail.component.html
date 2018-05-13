@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>TODO</h1>
+  <a [routerLink]="['/todo']">List</a>
+  <dl class="list">
+    <dt>Task</dt>
+    <dd>{{ todo.task }}</dd>
+    <dt>Details</dt>
+    <dd>{{ todo.taskDetails }}</dd>
+    <dt>priority</dt>
+    <dd>{{ todo.priority }}</dd>
+    <dt>Status</dt>
+    <dd>{{ todo.status }}</dd>
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/todo-edit', todo.id]" class="btn btn-primary">EDIT</a>
+      <button mat-button (click)="cancel()" class="btn">Back</button>
+      <button mat-button (click)="deleteToDo(todo.id)" class="btn btn-warning">Delete</button>
+    </div>
+  </div>
+</div> 

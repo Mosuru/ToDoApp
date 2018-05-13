@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Add ToDo</h1>
+  <a [routerLink]="['/todo']">List</a>
+  <div class="row">
+    <div class="col-md-6">
+      <form  #todoForm="ngForm">
+        <div class="form-group">
+          <label for="name">Task</label>
+          <input type="text" class="form-control" [(ngModel)]="todo.task" name="task" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Details</label>
+          <input type="text" class="form-control" [(ngModel)]="todo.taskDetails" name="taskDetails" required>
+        </div>
+        <div class="form-group">
+          <label for="name">priority</label>
+          <input type="text" class="form-control" [(ngModel)]="todo.priority" name="priority" required>
+        </div>
+        <div class="form-group">
+          <label for="name">status</label>
+          <input type="text" class="form-control" [(ngModel)]="todo.status" name="status" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success"  (click)="saveToDo(todo)">Save</button>
+          <button mat-button (click)="cancel()" class="btn">Cancel</button>
+          <button mat-button (click)="cancel()" class="btn">List</button>
+        </div> 
+      </form>
+    </div>
+  </div>
+</div>

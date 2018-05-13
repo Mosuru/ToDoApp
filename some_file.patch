@@ -1,0 +1,13 @@
+diff --git ToDoUI/src/app/todo/todo.component.html ToDoUI/src/app/todo/todo.component.html
+index f70548b..b7131c5 100644
+--- ToDoUI/src/app/todo/todo.component.html
++++ ToDoUI/src/app/todo/todo.component.html
+@@ -10,7 +10,7 @@
+   <table class="table table-bordered user-table">
+     <thead>
+       <tr>
+-        <th>Task<input type="text" class="form-control"></th>
++        <th>Task<input type="text" class="form-control" name="searchOnTask"></th>
+         <th>Details</th>
+         <th>Priority<select (change)="changeHandler($event)">
+           <option value="All">All</option>
